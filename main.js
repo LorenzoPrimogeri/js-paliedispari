@@ -39,6 +39,7 @@ function random(min, max) {
 function PariODispari(numeroUtente, numeroComputer) {
     console.log("tu:" + numeroUtente, "computer:" + numeroComputer);
     let somma = numeroUtente + numeroComputer;
+    console.log("la somma è:" + somma);
     if (somma % 2 == 0) {
         return "pari";
     } else {
