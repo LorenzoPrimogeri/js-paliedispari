@@ -13,8 +13,15 @@ function PariODispari(numeroUtente, numeroComputer) {
     }
 
 };
-const scelta = prompt("Inserisci 'pari' o 'dispari'");
-const numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+let numeroUtente
+let scelta;
+do {
+    scelta = prompt("Inserisci 'pari' o 'dispari'");
+} while (scelta != "pari" && scelta != "dispari");
+do {
+    numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+} while (numeroUtente < 1 || numeroUtente > 3 || isNaN(numeroUtente));
+
 const numeroComputer = random(1, 5);
 const verifica = PariODispari(numeroUtente, numeroComputer);
 
